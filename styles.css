@@ -98,6 +98,13 @@ button { font: inherit; cursor: pointer; }
 }
 .refuse:hover { color: var(--gov-ink); }
 .age.glitch { animation: glitch .45s steps(2) forwards; }
+/* phones: keep the card inside the screen, centred, with even spacing */
+@media (max-width: 600px) {
+  .age { padding-block: max(24px, env(safe-area-inset-top, 0px)) max(24px, env(safe-area-inset-bottom, 0px)); overflow-x: hidden; }
+  .age-card { box-sizing: border-box; max-width: 460px; padding: 24px 20px 18px; gap: 14px; }
+  .age-card :is(h1, p) { margin: 0; }
+  .age-msg:empty { display: none; }
+}
 @keyframes glitch {
   0% { transform: none; filter: none; }
   25% { transform: translate(-12px, 4px) skewX(8deg); filter: hue-rotate(90deg) contrast(2); }
