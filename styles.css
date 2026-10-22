@@ -596,3 +596,6 @@ button { font: inherit; cursor: pointer; }
   .paper.wide .keep .total b { font-size: 30px; }
   .paper.wide .big-quote cite { display: none; }
 }
+
+/* no page dock: pages turn by click, swipe or arrow keys */
+.dock { display: none !important; }
