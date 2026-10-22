@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Daily Whisker | $NIGEL</title>
+  <meta name="description" content="Ofcom fined 4chan £520,000. 4chan sent a hamster. The story of Nigel J. Whiskerford, and $NIGEL on Solana.">
+  <meta property="og:title" content="The Daily Whisker | $NIGEL">
+  <meta property="og:description" content="Fined £520K. Sent a hamster.">
+  <meta property="og:image" content="assets/nigel.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/nigel.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;800&family=IBM+Plex+Mono:wght@500;600&family=Public+Sans:wght@400;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="controls">
+  <button class="ctl" id="sound" aria-pressed="true">Sound: on</button>
+  <button class="ctl" id="skip">Skip intro</button>
+</div>
+
+<!-- Stage 1 -->
+<section class="layer age" id="age">
+  <div class="age-card" role="dialog" aria-labelledby="age-h">
+    <div class="age-top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+      Age assurance · Required
+    </div>
+    <h1 id="age-h">Verify your age to continue</h1>
+    <p>Under the Online Safety Act 2023, some websites must check that you are over 18 before you can see them. Choose a verification method.</p>
+    <div class="age-opts">
+      <button class="age-opt" id="opt-id"><strong>Upload photo ID</strong><span>Passport, driving licence or national ID card</span></button>
+      <button class="age-opt" id="opt-face"><strong>Face scan</strong><span>Use your camera to estimate your age</span></button>
+    </div>
+    <p class="age-msg" id="age-msg" aria-live="polite"></p>
+    <div class="refuse-row">
+      <p class="age-fine">Your data may be shared with a third-party provider.</p>
+      <button class="refuse" id="refuse">Refuse</button>
+    </div>
+  </div>
+</section>
+
+<!-- Stage 2 -->
+<section class="layer block" id="block" hidden>
+  <div class="block-inner">
+    <svg class="block-icon" viewBox="0 0 72 72" aria-hidden="true">
+      <path d="M16 6h28l14 14v46H16z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M44 6v14h14" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+      <circle cx="37" cy="45" r="12" fill="none" stroke="currentColor" stroke-width="4"/>
+      <path d="M29 45h16" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+    <h2>This site has been blocked</h2>
+    <p>Your internet provider has restricted access to this website under the Online Safety Act 2023.</p>
+    <ul class="block-details">
+      <li><b>Reason:</b> Non-compliance with the Online Safety Act 2023</li>
+      <li><b>Outstanding penalties:</b> £520,000</li>
+      <li><b>Reference:</b> OSA-451-0319</li>
+    </ul>
+    <p class="block-code">HTTP ERROR 451</p>
+    <div class="block-actions" aria-hidden="true">
+      <span class="block-link">Details</span>
+      <span class="block-btn">Go back</span>
+    </div>
+  </div>
+</section>
+<div class="layer hole" id="hole" hidden aria-label="Enter Nigel's world" role="button" tabindex="0">
+  <div class="nigel" id="nigel"></div>
+</div>
+<canvas class="layer crumbs" id="crumbs"></canvas>
+<button class="enter" id="enter" hidden><span class="proceed">Proceed anyway</span><span class="unsafe">Not recommended by your internet provider</span></button>
+
+<!-- Stage 3: The Daily Whisker -->
+<section class="layer world" id="world" hidden>
+  <div class="paper" id="paper"></div>
+</section>
+
+<!-- Page content; the script arranges these into an open paper (wide) or single sheets (narrow) -->
+<div id="pages" hidden>
+
+  <!-- 1: front -->
+  <div class="page" lang="en" aria-label="Front page">
+    <header class="redtop">
+      <div aria-hidden="true"></div>
+      <div class="mast-title"><i>The Daily Whisker</i></div>
+      <div aria-hidden="true"></div>
+    </header>
+    <div class="dateline"><span>Thursday, 19 March 2026</span><span>No. 1 · Late edition</span></div>
+    <h1 class="hed">Fined £520K. <span class="red">Sent a hamster.</span></h1>
+    <div class="front-grid">
+      <figure class="splash">
+        <div class="photo">
+          <img class="nigel-photo" alt="Nigel J. Whiskerford, a giant hamster in a Godzilla costume holding a peanut, standing over Tokyo">
+          <span class="stamp">Unpaid</span>
+        </div>
+        <figcaption class="caption"><b>Giant:</b> Nigel J. Whiskerford in Tokyo, "dressed up as Godzilla and holding an equally giant peanut".</figcaption>
+      </figure>
+      <div class="story">
+        <p class="byline">By our rodent affairs desk</p>
+        <p class="standfirst">Britain's online regulator fined 4chan £520,000. The site's lawyer answered with a picture of a giant hamster.</p>
+        <div class="copy">
+          <p>Ofcom has confirmed £520,000 in penalties against 4chan under the Online Safety Act 2023.</p>
+          <p>4chan is based in the US and says it has no assets in Britain. Its lawyer, Preston Byrne, replied that the fine was too big for Mr. Whiskers, the hamster sent after Ofcom's first fine.</p>
+          <p>So it went to his giant cousin, Nigel J. Whiskerford, who was "touring in Japan".</p>
+        </div>
+        <p class="jump">Full story, <b>page 2</b></p>
+        <blockquote class="inpull front-pull">"The Brits don't get to colonize American companies operating out of America."<cite>Nico Perrino, free-speech group FIRE</cite></blockquote>
+        <p class="reaction">Ofcom's enforcement director, Suzanne Cater, said the regulator would act against firms that fall short: "The UK is setting new standards for online safety."</p>
+        
+      </div>
+    </div>
+    <p class="src">Sources: <a href="https://x.com/prestonjbyrne/status/2034551030453539149" target="_blank" rel="noopener">Preston Byrne on X</a> · <a href="https://reclaimthenet.org/ofcom-has-fined-4chan-520000" target="_blank" rel="noopener">Reclaim The Net</a> · <a href="https://www.rollonfriday.com/news-content/lawyer-mocks-ofcoms-big-fine-bigger-hamster" target="_blank" rel="noopener">RollOnFriday</a> · <a href="https://www.yahoo.com/news/articles/4chan-sends-hilarious-hamster-filled-154747925.html" target="_blank" rel="noopener">Reason</a></p>
+  </div>
+
+  <!-- 2: backstory -->
+  <div class="page" lang="en" aria-label="Page 2">
+    <header class="folio"><span>The Daily Whisker</span><span>Thursday, 19 March 2026</span><span class="fm">2</span></header>
+    <span class="kicker">The backstory</span>
+    <h2 class="hed sm">How a British law came for an <span class="red">American website</span></h2>
+    <p class="deck">Ofcom says the Online Safety Act reaches any website people in Britain can visit. 4chan says Britain can't collect from a company with nothing in Britain.</p>
+    <p class="byline">By our rodent affairs desk</p>
+    <div class="p2">
+      <div class="article copy">
+        <p>The Online Safety Act became law in 2023. It gives Ofcom, the UK's communications regulator, the power to fine websites that people in Britain can reach, wherever those websites are based.</p>
+        <p>4chan is run from the United States and says it has no offices, staff or assets in Britain. Ofcom opened an investigation into the site in June 2025.</p>
+        <h3 class="crosshead">The first fine</h3>
+        <p>Ofcom then fined 4chan £20,000 for not answering its information requests, plus £100 for every day the answers didn't arrive. 4chan's lawyer, Preston Byrne, replied with a hamster joke. The hamster was Mr. Whiskers.</p>
+        <h3 class="crosshead">Three breaches</h3>
+        <p>On 19 March Ofcom confirmed that 4chan had broken the Act three ways: no suitable risk assessment for illegal content, terms of service that don't say how users are protected, and no "highly effective age assurance" to keep children from pornography. The penalties total £520,000, of which £450,000 is for the missing age checks.</p>
+        <blockquote class="inpull">"The United Kingdom lost the American Revolutionary War."<cite>Preston Byrne, 4chan's lawyer</cite></blockquote>
+        <h3 class="crosshead">Nothing to seize</h3>
+        <p>4chan argues a British regulator cannot enforce British fines against an American company with nothing in Britain to seize, and has taken Ofcom to court in the United States.</p>
+        <p>Ofcom says it has started work to recover unpaid fines, and has warned it could ask UK internet providers to block the site.</p>
+      </div>
+      <aside class="sidebar">
+        <h3>How it unfolded</h3>
+        <ol class="tl">
+          <li><b>2023</b>The Online Safety Act becomes law.</li>
+          <li><b>June 2025</b>Ofcom opens an investigation into 4chan.</li>
+          <li><b>2025</b>First fine: £20,000, plus £100 a day. Mr. Whiskers replies.</li>
+          <li><b>12 February 2026</b>Ofcom issues a provisional decision.</li>
+          <li><b>19 March 2026</b>£520,000 confirmed. Nigel J. Whiskerford replies.</li>
+        </ol>
+        <p class="total"><b>£520,000</b>Total penalties. Unpaid.</p>
+      </aside>
+    </div>
+    <p class="src">Sources: Ofcom's decision email, published by <a href="https://x.com/prestonjbyrne/status/2034551030453539149" target="_blank" rel="noopener">Preston Byrne</a> · <a href="https://www.computing.co.uk/news/2025/legislation-regulation/ofcom-launches-investigation-into-4chan" target="_blank" rel="noopener">Computing</a> · <a href="https://www.computing.co.uk/news/2025/legislation-regulation/ofcom-fines-4chan-twenty-thousand" target="_blank" rel="noopener">Computing</a> · <a href="https://www.aol.com/articles/4chan-faces-uk-ban-refusing-141058765.html" target="_blank" rel="noopener">AOL</a> · <a href="https://www.yahoo.com/news/articles/4chan-sends-hilarious-hamster-filled-154747925.html" target="_blank" rel="noopener">Reason</a></p>
+  </div>
+
+  <!-- 3: the letter -->
+  <div class="page" lang="en" aria-label="Page 3">
+    <header class="folio"><span class="fm">3</span><span>Thursday, 19 March 2026</span><span>The Daily Whisker</span></header>
+    <span class="kicker">Letters</span>
+    <h2 class="hed sm">The reply that <span class="red">started it all</span></h2>
+    <p class="deck">Ofcom emailed 4chan its £520,000 decision on 19 March. The site's lawyers answered the same day. We print the reply in full.</p>
+    <div class="p3">
+      <div class="letters">
+        <p class="salute">Ofcom,</p>
+        <p>Thanks. As has been explained to your agency, <i>ad nauseam</i>, the United Kingdom lost the American Revolutionary War. We are not in the mood to discuss the matter further, and have not been in the mood for 250 years.</p>
+        <p>I note for the record that, last time your agency sent my client a censorship fine, we responded with a hamster joke. Since you have now sent my client a giant fine, a fine so large that Mr. Whiskers' enclosure is not big enough to contain it, we will need to send the fine to Mr. Whiskers' giant hamster cousin, Nigel J. Whiskerford. Unfortunately, Nigel is out of the country this week, touring in Japan. Here's a picture of Nigel in Tokyo, dressed up as Godzilla and holding an equally giant peanut.</p>
+        <p>Isn't he just the cutest?</p>
+        <p>My client reserves all rights and waives none. Reserved rights include the right to sue you again and/or to respond to future correspondence with an even larger rodent, such as a marmot.</p>
+        <p>Or, maybe, you could just stop sending Americans stupid letters and acknowledge the sovereignty of the United States.</p>
+        <p class="sign">Byrne &amp; Storm<span>Counsel for 4chan</span></p>
+      </div>
+      <aside class="p3-side">
+        <figure>
+          <div class="photo wide-photo"><img class="reason-photo" alt="Nigel J. Whiskerford in a Godzilla costume over Tokyo, beside the 4chan logo"></div>
+          <figcaption class="caption"><b>Making headlines:</b> Nigel as pictured by Reason magazine, 23 March 2026. Image: Reason.</figcaption>
+        </figure>
+        <blockquote class="side-pull">"Isn't he just the cutest?"</blockquote>
+        <h3 class="crosshead">What's next</h3>
+        <div class="reaction">
+          <p>Byrne is helping draft a model "UK Free Speech Act 2026", which he hopes a British MP will take up. It would move UK law closer to America's First Amendment.</p>
+        </div>
+      </aside>
+    </div>
+    <p class="src">Sources: <a href="https://x.com/prestonjbyrne/status/2034551030453539149" target="_blank" rel="noopener">Preston Byrne on X, 19 March 2026</a> · <a href="https://www.yahoo.com/news/articles/4chan-sends-hilarious-hamster-filled-154747925.html" target="_blank" rel="noopener">Reason</a></p>
+  </div>
+
+  <!-- 4: back page -->
+  <div class="page" lang="en" aria-label="Back page">
+    <header class="folio"><span>The Daily Whisker</span><span>Back page</span><span class="fm">4</span></header>
+    <span class="kicker">Classifieds</span>
+    <h2 class="hed sm">Join <span class="red">Nigel</span></h2>
+    <div class="cls">
+      <section class="cl wanted">
+        <h3>Wanted: holders</h3>
+        <p>Giant hamster seeks people who won't upload their passport to read a website. $NIGEL on Solana. Contract address:</p>
+        <div class="ca-row"><code id="ca">8EnmgofrT5zp6uUiNfECkUMBnYA42pMqPj35vVXUpump</code><button id="copy-ca">Copy</button></div>
+      </section>
+      <section class="cl peanut-ad" aria-label="Advertisement">
+        <span class="ad-label">Advertisement</span>
+        <svg class="peanut" viewBox="0 0 120 224" aria-hidden="true">
+          <path d="M60 8 C108 8 112 78 90 104 C116 126 114 216 60 216 C6 216 4 126 30 104 C8 78 12 8 60 8 Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <g fill="currentColor" opacity=".55">
+            <circle cx="44" cy="40" r="3"/><circle cx="62" cy="34" r="3"/><circle cx="78" cy="44" r="3"/><circle cx="52" cy="60" r="3"/><circle cx="72" cy="66" r="3"/><circle cx="40" cy="78" r="3"/>
+            <circle cx="40" cy="140" r="3"/><circle cx="60" cy="130" r="3"/><circle cx="80" cy="142" r="3"/><circle cx="50" cy="162" r="3"/><circle cx="72" cy="168" r="3"/><circle cx="38" cy="186" r="3"/><circle cx="60" cy="192" r="3"/><circle cx="82" cy="186" r="3"/>
+          </g>
+        </svg>
+        <h3>Giant peanuts</h3>
+        <p>Wholesale. Delivered anywhere in Tokyo. Hamster-sized portions available.</p>
+        <p class="ad-foot">Ask for Nigel</p>
+      </section>
+      <section class="cl notices">
+        <h3>Public notices</h3>
+        <a class="lead" href="https://x.com/NigeljWhisker4D" target="_blank" rel="noopener"><b>Follow Nigel</b><i></i><span>X / Twitter</span></a>
+        <a class="lead" href="https://dexscreener.com/solana/9KTUE5oYgjwxrBLseaSdDFG6JvvyVySQxnKHpt7DBWrE" target="_blank" rel="noopener"><b>Live chart</b><i></i><span>DexScreener</span></a>
+        <a class="lead" href="https://pump.fun/coin/8EnmgofrT5zp6uUiNfECkUMBnYA42pMqPj35vVXUpump" target="_blank" rel="noopener"><b>Launch page</b><i></i><span>pump.fun</span></a>
+      </section>
+      <section class="cl howto">
+        <h3>How to buy</h3>
+        <ol>
+          <li><span>Download <a href="https://phantom.app" target="_blank" rel="noopener">Phantom</a> or Solflare and create a wallet.</span></li>
+          <li><span>Buy SOL and send it to your wallet.</span></li>
+          <li><span>Open <a href="https://jup.ag/swap/SOL-8EnmgofrT5zp6uUiNfECkUMBnYA42pMqPj35vVXUpump" target="_blank" rel="noopener">Jupiter</a> and paste the contract address above.</span></li>
+          <li><span>Swap SOL for $NIGEL.</span></li>
+        </ol>
+      </section>
+      <section class="cl legal">
+        <p class="small-print">$NIGEL is a community memecoin inspired by the Nigel J. Whiskerford meme. It is not affiliated with or endorsed by 4chan, its lawyers, or Ofcom. No roadmap, no promises, no financial advice. Memecoins are highly volatile, so only spend what you can afford to lose.</p>
+        <button class="replay-btn" id="replay">Replay intro</button>
+      </section>
+    </div>
+  </div></div>
+
+<nav class="dock" id="dock" aria-label="Pages" hidden>
+  <button id="prev">←<span class="hide-sm"> Back</span></button>
+  <span id="pageno">Pages 1–2 of 4</span>
+  <button id="next"><span class="hide-sm">Turn page </span>→</button>
+  <a class="dock-buy" href="https://jup.ag/swap/SOL-8EnmgofrT5zp6uUiNfECkUMBnYA42pMqPj35vVXUpump" target="_blank" rel="noopener">Buy $NIGEL</a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
