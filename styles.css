@@ -252,7 +252,7 @@ button { font: inherit; cursor: pointer; }
   .paper.wide .sidebar { display: none; }
   .paper.wide .p2 { grid-template-columns: 1fr; }
 }
-.paper:not(.wide) :is(.front-grid, .family, .p4-grid) { flex: none; }
+.paper:not(.wide) .page > * { flex: none; }
 /* single pages scroll: the face is the scroller and the paper texture is part of the page, so it moves with the print */
 .paper:not(.wide) .face.front { overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
 .paper:not(.wide) .page { position: relative; inset: auto; min-height: 100%; overflow: visible; container-type: inline-size; padding-bottom: 28px; }
