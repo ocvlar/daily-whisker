@@ -481,7 +481,6 @@ button { font: inherit; cursor: pointer; }
 .lead span { font-family: var(--f-display); text-transform: uppercase; font-size: 1.15em; letter-spacing: .02em; }
 .lead:hover, .lead:hover span { color: var(--press-red); }
 .legal .small-print { flex: 1; columns: auto; font-size: clamp(10.5px, 1.5cqh, 12px); line-height: 1.4; }
-.legal .replay-btn { flex: none; }
 @container (max-width: 600px) {
   .p3, .cls { grid-template-columns: 1fr; }
   .p3-side { border-left: 0; padding-left: 0; }
@@ -528,9 +527,8 @@ button { font: inherit; cursor: pointer; }
 .classified p { font-family: var(--f-serif); font-size: clamp(12.0px, 1.863cqh, 15px); line-height: 1.45; }
 .ca-row { display: flex; gap: 8px; align-items: center; border: 1px solid var(--ink); padding: 6px 6px 6px 10px; background: rgba(255, 255, 255, .35); }
 .ca-row code { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-family: var(--f-mono); font-size: clamp(10.0px, 1.552cqh, 12.5px); }
-.ca-row button, .replay-btn { background: var(--ink); color: var(--paper); border: 0; padding: 9px 14px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; font-size: clamp(9.6px, 1.490cqh, 12px); }
-.ca-row button:hover, .replay-btn:hover { background: var(--press-red); }
-.replay-btn { align-self: flex-start; }
+.ca-row button { background: var(--ink); color: var(--paper); border: 0; padding: 9px 14px; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; font-size: clamp(9.6px, 1.490cqh, 12px); }
+.ca-row button:hover { background: var(--press-red); }
 .links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--ink); }
 .links a { font-family: var(--f-display); text-transform: uppercase; font-size: clamp(13.0px, min(3cqi, 3.54cqh), 28px); color: var(--ink); text-decoration: none; padding: 12px 0; border-bottom: 1px solid var(--ink); }
 .links a:hover { color: var(--press-red); }

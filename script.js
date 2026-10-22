@@ -351,19 +351,6 @@ skip.addEventListener("click", () => {
   showWorld();
 });
 
-$("replay").addEventListener("click", () => {
-  run++;
-  world.hidden = true; paper.classList.remove("landed");
-  resetHole();
-  block.hidden = true; enter.hidden = true;
-  age.hidden = false; age.classList.remove("glitch");
-  $("age-msg").textContent = ""; idN = faceN = 0;
-  document.querySelectorAll(".age-opt").forEach(b => b.classList.remove("shake"));
-  dock.hidden = true;
-  // no on-screen controls: pages turn by click, swipe or arrow keys
-  controls.prepend(soundBtn);
-});
-
 $("copy-ca").addEventListener("click", async e => {
   const btn = e.currentTarget, text = $("ca").textContent;
   try { await navigator.clipboard.writeText(text); btn.textContent = "Copied"; }
