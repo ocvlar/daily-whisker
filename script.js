@@ -361,7 +361,7 @@ $("replay").addEventListener("click", () => {
   $("age-msg").textContent = ""; idN = faceN = 0;
   document.querySelectorAll(".age-opt").forEach(b => b.classList.remove("shake"));
   dock.hidden = true;
-  controls.hidden = false;
+  // the intro has no on-screen controls; sound lives in the dock
   controls.prepend(soundBtn);
 });
 
