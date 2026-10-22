@@ -393,7 +393,8 @@ function mkFace(page, cls) {
   c.className = "crumple";
   c.dataset.v = faceCount++ % CRUMPLE_VARIANTS;
   if (crumples[c.dataset.v]) c.style.backgroundImage = `url(${crumples[c.dataset.v]})`;
-  f.appendChild(c);
+  // single pages scroll, so their creases live inside the page and move with the print
+  (page && !wide ? page : f).appendChild(c);
   return f;
 }
 function maxCur() { return wide ? units.length : units.length - 1; }
@@ -404,6 +405,7 @@ function build() {
   wide = wideMQ.matches;
   const frag = document.createDocumentFragment();
   units = [];
+  document.querySelectorAll(".page > .crumple").forEach(c => c.remove());
   if (wide) {
     const L = document.createElement("div"); L.className = "half left";
     L.appendChild(mkFace(pageEls[0], "l"));

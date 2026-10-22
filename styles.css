@@ -246,8 +246,13 @@ button { font: inherit; cursor: pointer; }
   .paper.wide .p2 { grid-template-columns: 1fr; }
 }
 .paper:not(.wide) :is(.front-grid, .family, .p4-grid) { flex: none; }
+/* single pages scroll: the face is the scroller and the paper texture is part of the page, so it moves with the print */
+.paper:not(.wide) .face.front { overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+.paper:not(.wide) .page { position: relative; inset: auto; min-height: 100%; overflow: visible; container-type: inline-size; padding-bottom: 28px; }
+.paper:not(.wide) .face.front::after { content: none; }
+.page > .crumple { position: absolute; inset: 0; }
 /* texture on top of the ink so the print sits in the paper */
-.face::after {
+.face::after, .paper:not(.wide) .page::after {
   content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 5;
   mix-blend-mode: multiply;
   background:
