@@ -341,7 +341,6 @@ function showWorld(fromDive = false) {
     setTimeout(thud, reduce ? 0 : 420);
   }
   controls.hidden = true;
-  dock.hidden = false;
   dock.prepend(soundBtn);
 }
 
@@ -361,7 +360,7 @@ $("replay").addEventListener("click", () => {
   $("age-msg").textContent = ""; idN = faceN = 0;
   document.querySelectorAll(".age-opt").forEach(b => b.classList.remove("shake"));
   dock.hidden = true;
-  // the intro has no on-screen controls; sound lives in the dock
+  // no on-screen controls: pages turn by click, swipe or arrow keys
   controls.prepend(soundBtn);
 });
 
@@ -484,7 +483,14 @@ let sx = 0, sy = 0;
 paper.addEventListener("pointerdown", e => { sx = e.clientX; sy = e.clientY; });
 paper.addEventListener("pointerup", e => {
   const dx = e.clientX - sx, dy = e.clientY - sy;
-  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) turn(dx < 0 ? 1 : -1);
+  if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) return turn(dx < 0 ? 1 : -1);
+  // a plain click turns the page: right half forward, left half back (links and buttons still work)
+  if (Math.abs(dx) < 8 && Math.abs(dy) < 8 && !e.target.closest("a, button")) turn(e.clientX > innerWidth / 2 ? 1 : -1);
+});
+paper.addEventListener("pointermove", e => {
+  if (e.pointerType !== "mouse") return;
+  const fwd = e.clientX > innerWidth / 2;
+  paper.style.cursor = e.target.closest("a, button") ? "" : fwd ? (cur < maxCur() ? "e-resize" : "") : (cur > 0 ? "w-resize" : "");
 });
 wideMQ.addEventListener("change", build);
 
