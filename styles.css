@@ -258,6 +258,11 @@ button { font: inherit; cursor: pointer; }
 .paper:not(.wide) .page { position: relative; inset: auto; min-height: 100%; overflow: visible; container-type: inline-size; padding-bottom: 28px; }
 .paper:not(.wide) .face.front::after { content: none; }
 .page > .crumple { position: absolute; inset: 0; }
+/* phones: brighter, cleaner paper for small-screen reading */
+.paper:not(.wide) .face.front { background-color: #f7f3ea; }
+.paper:not(.wide) .page > .crumple { opacity: .4; }
+.paper:not(.wide) .page::after { opacity: .45; }
+.paper:not(.wide) .page { --ink-2: #3b352d; }
 /* texture on top of the ink so the print sits in the paper */
 .face::after, .paper:not(.wide) .page::after {
   content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 5;
